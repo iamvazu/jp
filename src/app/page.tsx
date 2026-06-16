@@ -35,6 +35,15 @@ export default function HomePage() {
   const { scrollY } = useScroll();
   const yParallax = useTransform(scrollY, [0, 800], [0, 200]);
 
+  const [showSecondImage, setShowSecondImage] = useState(false);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setShowSecondImage(prev => !prev);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
   // Handle intersection triggers for the Teflon vs PVC section
   const [inView, setInView] = useState(false);
   useEffect(() => {
@@ -67,7 +76,7 @@ export default function HomePage() {
 
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
           {/* Hero Left Content */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 flex flex-col justify-center space-y-8 min-h-full py-6">
             <div className="space-y-4">
               {/* Monospace credibility strip */}
               <motion.div
@@ -85,15 +94,20 @@ export default function HomePage() {
                 <span>Since 1991</span>
               </motion.div>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-ink leading-[1.05] tracking-tight uppercase"
-              >
-                The Proven <br />
-                <span className="text-cobalt">Technology.</span>
-              </motion.h1>
+              <div className="space-y-2">
+                <span className="block text-[10px] font-mono tracking-widest text-cobalt uppercase font-bold mt-2">
+                  PTFE · FEP · SILICONE WIRE, CABLE & SLEEVING
+                </span>
+                <motion.h1
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                  className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-ink leading-[1.05] tracking-tight uppercase"
+                >
+                  The Proven <br />
+                  <span className="text-cobalt">Technology.</span>
+                </motion.h1>
+              </div>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -128,75 +142,76 @@ export default function HomePage() {
                 Capabilities Statement (PDF)
               </a>
             </motion.div>
+
+            {/* Proof Row */}
+            <div className="pt-6 border-t border-ink/10 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[9px] font-mono uppercase tracking-widest text-ink/40">
+              <span className="font-bold text-ink/60">TRUSTED IN:</span>
+              <span>AEROSPACE</span>
+              <span className="text-swan-red/40">•</span>
+              <span>DEFENCE</span>
+              <span className="text-swan-red/40">•</span>
+              <span>ATOMIC ENERGY</span>
+              <span className="text-swan-red/40">•</span>
+              <span>TELECOM</span>
+            </div>
           </div>
 
-          {/* Hero Right Media (with mask & drawing SVG wire) */}
+          {/* Hero Right Media (with 3D Card Flip rotation and scan-line crop) */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
-            {/* SVG drawing wire path with continuous electron pulse flow */}
-            <svg
-              className="absolute inset-0 w-full h-full pointer-events-none z-20"
-              viewBox="0 0 400 400"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Solid Orange Wire - Draws in on load */}
-              <path
-                d="M -50,300 C 100,320 150,100 250,80 C 350,60 400,200 450,220"
-                stroke="#F2602F"
-                strokeWidth="3"
-                strokeLinecap="round"
-                className="animate-draw-solid"
-              />
-              {/* Continuous Orange Pulse traveling along the solid path */}
-              <circle r="4.5" fill="#F2602F">
-                <animateMotion
-                  dur="4s"
-                  repeatCount="indefinite"
-                  path="M -50,300 C 100,320 150,100 250,80 C 350,60 400,200 450,220"
-                  begin="2s"
-                />
-              </circle>
-
-              {/* Dashed Blue Wire - Flows continuously to show signals */}
-              <path
-                d="M -30,280 C 80,300 130,120 230,100 C 330,80 380,220 430,240"
-                stroke="#1F4FA3"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeDasharray="6 6"
-                className="animate-flow-blue"
-              />
-              {/* Continuous Blue Pulse traveling along the dashed path */}
-              <circle r="3.5" fill="#1F4FA3">
-                <animateMotion
-                  dur="4.5s"
-                  repeatCount="indefinite"
-                  path="M -30,280 C 80,300 130,120 230,100 C 330,80 380,220 430,240"
-                  begin="0.5s"
-                />
-              </circle>
-            </svg>
-
-            {/* Parallax image revealed via custom container mask */}
             <motion.div
               style={{ y: yParallax }}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative w-full aspect-[4/5] sm:aspect-square md:aspect-[4/5] bg-white border border-ink/10 rounded-xs overflow-hidden shadow-xl"
+              className="relative w-full aspect-[4/5] sm:aspect-square md:aspect-[4/5] [perspective:1200px]"
             >
-              <Image
-                src="/brand/crops/homepage_hero.webp"
-                alt="Coloured PTFE wire coils + cut bundles"
-                fill
-                priority
-                className="object-cover object-center filter saturate-[0.85] contrast-[1.05]"
-                sizes="(max-w-7xl) 100vw, 400px"
-              />
-              {/* Blueprint coordinates watermark */}
-              <div className="absolute bottom-3 right-3 bg-ink/80 text-paper text-[8px] font-mono px-2 py-1 uppercase tracking-widest backdrop-blur-xs">
-                FIG.01 // PTFE_WIRE_BUNDLES
-              </div>
+              <motion.div
+                animate={{ rotateY: showSecondImage ? 180 : 0 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                className="relative w-full h-full [transform-style:preserve-3d] p-2 bg-white border border-ink/10 rounded-xs shadow-xl"
+              >
+                {/* Front Face: homepage_hero.webp */}
+                <div 
+                  className="absolute inset-2 [backface-visibility:hidden] overflow-hidden rounded-xs"
+                  style={{ transform: "rotateY(0deg)" }}
+                >
+                  <div className="relative w-full h-full overflow-hidden scale-105 translate-y-1">
+                    <Image
+                      src="/brand/crops/homepage_hero.webp"
+                      alt="Coloured PTFE wire coils + cut bundles"
+                      fill
+                      priority
+                      className="object-cover object-center filter saturate-[0.85] contrast-[1.05]"
+                      sizes="(max-w-7xl) 100vw, 400px"
+                    />
+                  </div>
+                  {/* Blueprint coordinates watermark */}
+                  <div className="absolute bottom-3 right-3 bg-ink/80 text-paper text-[8px] font-mono px-2 py-1 uppercase tracking-widest backdrop-blur-xs z-30">
+                    FIG.01 // PTFE_WIRE_BUNDLES
+                  </div>
+                </div>
+
+                {/* Back Face: hero_image2.webp */}
+                <div 
+                  className="absolute inset-2 [backface-visibility:hidden] overflow-hidden rounded-xs"
+                  style={{ transform: "rotateY(180deg)" }}
+                >
+                  <div className="relative w-full h-full overflow-hidden scale-105 translate-y-1">
+                    <Image
+                      src="/brand/crops/hero_image2.webp"
+                      alt="Premium multi-core and coaxial cables range"
+                      fill
+                      priority
+                      className="object-cover object-center filter saturate-[0.85] contrast-[1.05]"
+                      sizes="(max-w-7xl) 100vw, 400px"
+                    />
+                  </div>
+                  {/* Blueprint coordinates watermark */}
+                  <div className="absolute bottom-3 right-3 bg-ink/80 text-paper text-[8px] font-mono px-2 py-1 uppercase tracking-widest backdrop-blur-xs z-30 [transform:rotateY(180deg)]">
+                    FIG.02 // CORE_CABLE_RANGE
+                  </div>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
