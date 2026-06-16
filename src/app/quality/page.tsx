@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { ShieldAlert, Award, Calendar, CheckSquare, ShieldCheck, HelpCircle } from 'lucide-react';
 import { QUALITY_TIMELINE, DIELECTRIC_TESTS } from '../../data/content';
 
@@ -35,7 +36,14 @@ export default function QualityPage() {
             {/* Approval 1 */}
             <div className="bg-white p-6 border border-ink/10 rounded-xs space-y-4">
               <div className="flex items-center justify-between">
-                <Award className="w-8 h-8 text-cobalt" />
+                <div className="relative w-8 h-10 shrink-0">
+                  <Image
+                    src="/brand/crops/emblem_of_india.svg"
+                    alt="Ministry of Defence Emblem"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <span className="text-[9px] font-mono text-ink/40 uppercase">DEFENSE CODES</span>
               </div>
               <h3 className="font-display font-bold text-base uppercase text-ink">
@@ -52,7 +60,14 @@ export default function QualityPage() {
             {/* Approval 2 */}
             <div className="bg-white p-6 border border-ink/10 rounded-xs space-y-4">
               <div className="flex items-center justify-between">
-                <Award className="w-8 h-8 text-cobalt" />
+                <div className="relative w-10 h-8 shrink-0">
+                  <Image
+                    src="/brand/crops/cdot_logo.png"
+                    alt="C-DOT Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <span className="text-[9px] font-mono text-ink/40 uppercase">TELECOM STANDARDS</span>
               </div>
               <h3 className="font-display font-bold text-base uppercase text-ink">

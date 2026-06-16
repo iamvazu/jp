@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import SvgSwan from './SvgSwan';
 import { ShieldCheck, Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -23,14 +24,37 @@ export default function Footer() {
           <p className="text-white/60 text-sm max-w-sm leading-relaxed">
             Ministry of Defence (L.C.S.O) and C-DOT approved manufacturer of high-performance PTFE / Teflon and FEP wires, cables, sleeves, and tapes. Engineered for extreme-temperature defense and aerospace wiring applications.
           </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <div className="flex items-center gap-2 text-xs font-mono bg-white/5 border border-white/10 px-3 py-1.5 text-white/80">
-              <ShieldCheck className="w-4 h-4 text-swan-red" />
-              <span>MoD APPROVED</span>
+          <div className="flex flex-wrap items-center gap-6 pt-2">
+            {/* MoD Approved Badge */}
+            <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-xs">
+              <div className="relative w-8 h-10 filter brightness-0 invert shrink-0">
+                <Image
+                  src="/brand/crops/emblem_of_india.svg"
+                  alt="Ministry of Defence Emblem"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[9px] font-mono tracking-widest text-white/40 leading-none">APPROVED BY</span>
+                <span className="text-xs font-bold text-white tracking-wide uppercase mt-0.5">MoD (L.C.S.O)</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-xs font-mono bg-white/5 border border-white/10 px-3 py-1.5 text-white/80">
-              <ShieldCheck className="w-4 h-4 text-swan-red" />
-              <span>C-DOT APPROVED</span>
+
+            {/* C-DOT Approved Badge */}
+            <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-xs">
+              <div className="relative w-10 h-8 shrink-0">
+                <Image
+                  src="/brand/crops/cdot_logo.png"
+                  alt="C-DOT Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[9px] font-mono tracking-widest text-white/40 leading-none">APPROVED BY</span>
+                <span className="text-xs font-bold text-white tracking-wide uppercase mt-0.5">C-DOT INDIA</span>
+              </div>
             </div>
           </div>
         </div>
