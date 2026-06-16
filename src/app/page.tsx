@@ -206,29 +206,86 @@ export default function HomePage() {
       </section>
 
       {/* 2. CREDIBILITY / TRUST BAR */}
-      <section className="bg-ink text-paper py-8 border-b border-white/10 relative z-10">
+      <section className="bg-ink text-paper py-10 border-b border-white/10 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center text-center">
-            <div className="border-r border-white/10 last:border-0 pr-4">
-              <span className="block text-[10px] font-mono tracking-widest text-white/40 uppercase mb-1">APPROVAL TYPE 01</span>
-              <span className="block text-sm font-semibold uppercase tracking-wider text-white">MINISTRY OF DEFENCE</span>
-              <span className="block text-[10px] font-mono text-white/50 mt-0.5">L.C.S.O CERTIFIED</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-start text-center">
+            
+            {/* Approval Type 01: MoD */}
+            <div className="border-r border-white/10 last:border-0 pr-4 flex flex-col items-center justify-center space-y-3">
+              <div className="h-10 flex items-center justify-center">
+                <div className="relative w-8 h-10 filter brightness-0 invert shrink-0 opacity-85 hover:opacity-100 transition-opacity">
+                  <Image
+                    src="/brand/crops/emblem_of_india.svg"
+                    alt="Ministry of Defence Emblem"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              <div>
+                <span className="block text-[9px] font-mono tracking-widest text-white/40 uppercase mb-1">APPROVAL TYPE 01</span>
+                <span className="block text-sm font-semibold uppercase tracking-wider text-white">MINISTRY OF DEFENCE</span>
+                <span className="block text-[10px] font-mono text-white/50 mt-0.5">L.C.S.O CERTIFIED</span>
+              </div>
             </div>
-            <div className="md:border-r border-white/10 pr-4">
-              <span className="block text-[10px] font-mono tracking-widest text-white/40 uppercase mb-1">APPROVAL TYPE 02</span>
-              <span className="block text-sm font-semibold uppercase tracking-wider text-white">C-DOT APPROVED</span>
-              <span className="block text-[10px] font-mono text-white/50 mt-0.5">TELECOM STANDARDS</span>
+
+            {/* Approval Type 02: C-DOT */}
+            <div className="md:border-r border-white/10 pr-4 flex flex-col items-center justify-center space-y-3">
+              <div className="h-10 flex items-center justify-center">
+                <div className="relative w-12 h-8 shrink-0 opacity-85 hover:opacity-100 transition-opacity">
+                  <Image
+                    src="/brand/crops/cdot_logo.png"
+                    alt="C-DOT Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              <div>
+                <span className="block text-[9px] font-mono tracking-widest text-white/40 uppercase mb-1">APPROVAL TYPE 02</span>
+                <span className="block text-sm font-semibold uppercase tracking-wider text-white">C-DOT APPROVED</span>
+                <span className="block text-[10px] font-mono text-white/50 mt-0.5">TELECOM STANDARDS</span>
+              </div>
             </div>
-            <div className="border-r border-white/10 last:border-0 pr-4">
-              <span className="block text-[10px] font-mono tracking-widest text-white/40 uppercase mb-1">JURISDICTION</span>
-              <span className="block text-sm font-semibold uppercase tracking-wider text-white">JOINT SERVICES JSS</span>
-              <span className="block text-[10px] font-mono text-white/50 mt-0.5">51004 / 54802 / 51100</span>
+
+            {/* Jurisdiction: JSS */}
+            <div className="border-r border-white/10 last:border-0 pr-4 flex flex-col items-center justify-center space-y-3">
+              <div className="h-10 flex items-center justify-center">
+                <div className="relative w-16 h-8 filter brightness-0 invert shrink-0 opacity-85 hover:opacity-100 transition-opacity">
+                  <Image
+                    src="/brand/crops/ddpdos_logo.png"
+                    alt="Directorate of Standardisation JSS Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              <div>
+                <span className="block text-[9px] font-mono tracking-widest text-white/40 uppercase mb-1">JURISDICTION</span>
+                <span className="block text-sm font-semibold uppercase tracking-wider text-white">JOINT SERVICES JSS</span>
+                <span className="block text-[10px] font-mono text-white/50 mt-0.5">51004 / 54802 / 51100</span>
+              </div>
             </div>
-            <div className="pr-4">
-              <span className="block text-[10px] font-mono tracking-widest text-white/40 uppercase mb-1">SPECIFICATION</span>
-              <span className="block text-sm font-semibold uppercase tracking-wider text-white">MIL-SPEC STANDARD</span>
-              <span className="block text-[10px] font-mono text-white/50 mt-0.5">W-16878E / I-22129 / C-17</span>
+
+            {/* Specification: MIL-SPEC */}
+            <div className="pr-4 flex flex-col items-center justify-center space-y-3">
+              <div className="h-10 flex items-center justify-center">
+                <div className="relative w-10 h-10 shrink-0 opacity-85 hover:opacity-100 transition-opacity">
+                  <Image
+                    src="/brand/crops/dod_seal.svg"
+                    alt="US Department of Defense Seal"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+              <div>
+                <span className="block text-[9px] font-mono tracking-widest text-white/40 uppercase mb-1">SPECIFICATION</span>
+                <span className="block text-sm font-semibold uppercase tracking-wider text-white">MIL-SPEC STANDARD</span>
+                <span className="block text-[10px] font-mono text-white/50 mt-0.5">W-16878E / I-22129 / C-17</span>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
