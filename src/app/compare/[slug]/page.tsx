@@ -59,7 +59,7 @@ const COMPARISON_DATA: Record<string, ComparisonContent> = {
         text: "During harnessing, PVC wire shrinks back when touched by a soldering iron, exposing the bare conductor. PTFE is completely immune to soldering iron heat. PTFE also offers higher tensile strength and cut-through endurance. However, PVC is more flexible in cold rooms and is significantly less expensive, making it the default choice for low-cost consumer electronics."
       }
     ],
-    hubLink: "/resources/ptfe-vs-pvc-vs-fep-vs-silicone"
+    hubLink: "/resources/ptfe-vs-pvc-vs-fep-vs-silicone-wire-insulation"
   },
   "ptfe-vs-fep": {
     h1: "PTFE vs FEP Wire Insulation: Spec Comparison",
@@ -87,7 +87,7 @@ const COMPARISON_DATA: Record<string, ComparisonContent> = {
         text: "Both PTFE and FEP are excellent for RF and microwave telemetry because of their low dielectric loss. However, FEP is often chosen for coaxial cable jackets and miniature wire bundles because its extruded nature allows tighter concentricity control over long distances, which prevents impedance fluctuations in high-speed data feeds."
       }
     ],
-    hubLink: "/resources/ptfe-vs-pvc-vs-fep-vs-silicone"
+    hubLink: "/resources/ptfe-vs-pvc-vs-fep-vs-silicone-wire-insulation"
   },
   "ptfe-vs-silicone": {
     h1: "PTFE vs Silicone Wire Insulation: Spec Comparison",
@@ -115,7 +115,7 @@ const COMPARISON_DATA: Record<string, ComparisonContent> = {
         text: "Both materials handle high temperatures (+200°C to +260°C). Due to silicone's soft mechanical profile, silicone-insulated wires often require an outer glass-fiber braid or sleeve to protect the core from cutting, which adds to cost and diameter. PTFE is self-supporting and does not require protective braiding under standard environments."
       }
     ],
-    hubLink: "/resources/ptfe-vs-pvc-vs-fep-vs-silicone"
+    hubLink: "/resources/ptfe-vs-pvc-vs-fep-vs-silicone-wire-insulation"
   },
   "fep-vs-pvc": {
     h1: "FEP vs PVC Wire Insulation: Spec Comparison",
@@ -139,7 +139,7 @@ const COMPARISON_DATA: Record<string, ComparisonContent> = {
         text: "Because FEP has a low dielectric constant (2.1), signals travel faster through it than through PVC (which has a dielectric constant around 4). This low capacitance makes FEP the preferred insulation for high-speed digital communications, sensor telemetry, and telecom switching devices where signal distortion must be prevented."
       }
     ],
-    hubLink: "/resources/ptfe-vs-pvc-vs-fep-vs-silicone"
+    hubLink: "/resources/ptfe-vs-pvc-vs-fep-vs-silicone-wire-insulation"
   },
   "silver-vs-nickel-plated-copper": {
     h1: "Silver vs Nickel Plated Copper Conductors: Spec Comparison",
@@ -163,7 +163,7 @@ const COMPARISON_DATA: Record<string, ComparisonContent> = {
         text: "SPC wires are highly favored by assembly line operators because silver has a high affinity for solder. SPC can be terminated quickly using standard lead or lead-free solders and mild fluxes. Nickel is chemically passive and requires higher heat and active acid fluxes to achieve a reliable solder joint, which makes crimping the preferred termination for NPC."
       }
     ],
-    hubLink: "/resources/mil-w-16878-jss-51004-explained"
+    hubLink: "/resources/mil-w-16878-jss-51004-hook-up-wire-explained"
   },
   "solid-vs-stranded-hook-up-wire": {
     h1: "Solid vs Stranded Hook-Up Wire: Spec Comparison",

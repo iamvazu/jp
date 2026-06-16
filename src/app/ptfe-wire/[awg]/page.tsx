@@ -301,7 +301,7 @@ export default async function PtfeWireGaugePage({ params }: { params: Promise<{ 
                 <p className="text-xs text-ink/60 mt-1 leading-relaxed">
                   Deep dive into testing protocols, spark tests, and thermal endurance limits for defense cables.
                 </p>
-                <Link href="/resources/mil-w-16878-jss-51004-explained" className="inline-block text-xs font-mono text-swan-red hover:underline mt-3 focus:outline-none">
+                <Link href="/resources/mil-w-16878-jss-51004-hook-up-wire-explained" className="inline-block text-xs font-mono text-swan-red hover:underline mt-3 focus:outline-none">
                   Read Standards Guide →
                 </Link>
               </div>
@@ -316,7 +316,7 @@ export default async function PtfeWireGaugePage({ params }: { params: Promise<{ 
                 <p className="text-xs text-ink/60 mt-1 leading-relaxed">
                   Physical and chemical comparison of PTFE, FEP, PVC, and Silicone rubber insulation characteristics.
                 </p>
-                <Link href="/resources/ptfe-vs-pvc-vs-fep-vs-silicone" className="inline-block text-xs font-mono text-swan-red hover:underline mt-3 focus:outline-none">
+                <Link href="/resources/ptfe-vs-pvc-vs-fep-vs-silicone-wire-insulation" className="inline-block text-xs font-mono text-swan-red hover:underline mt-3 focus:outline-none">
                   Compare Materials →
                 </Link>
               </div>

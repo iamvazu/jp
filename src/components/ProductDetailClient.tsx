@@ -520,7 +520,7 @@ export default function ProductDetailClient({ family }: ProductDetailClientProps
                   A comprehensive insulation material comparison guide for aerospace and defense electronics engineering.
                 </p>
               </div>
-              <Link href="/resources/ptfe-vs-pvc-vs-fep-vs-silicone" className="inline-flex items-center gap-1.5 text-xs font-mono text-swan-red hover:underline mt-4 focus:outline-none">
+              <Link href="/resources/ptfe-vs-pvc-vs-fep-vs-silicone-wire-insulation" className="inline-flex items-center gap-1.5 text-xs font-mono text-swan-red hover:underline mt-4 focus:outline-none">
                 Read Guide →
               </Link>
             </div>
@@ -538,7 +538,7 @@ export default function ProductDetailClient({ family }: ProductDetailClientProps
                   Understanding military standard MIL-W-16878E and joint services specification JSS 51004 for electronic wiring.
                 </p>
               </div>
-              <Link href="/resources/mil-w-16878-jss-51004-explained" className="inline-flex items-center gap-1.5 text-xs font-mono text-swan-red hover:underline mt-4 focus:outline-none">
+              <Link href="/resources/mil-w-16878-jss-51004-hook-up-wire-explained" className="inline-flex items-center gap-1.5 text-xs font-mono text-swan-red hover:underline mt-4 focus:outline-none">
                 Read Guide →
               </Link>
             </div>

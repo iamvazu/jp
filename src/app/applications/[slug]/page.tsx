@@ -277,7 +277,7 @@ export default async function ApplicationPage({ params }: { params: Promise<{ sl
                 <p className="text-xs text-ink/60 mt-1 leading-relaxed">
                   Understand how PTFE, FEP, PVC, and Silicone differ in chemical resistance and thermal ratings.
                 </p>
-                <Link href="/resources/ptfe-vs-pvc-vs-fep-vs-silicone" className="inline-block text-xs font-mono text-swan-red hover:underline mt-3 focus:outline-none">
+                <Link href="/resources/ptfe-vs-pvc-vs-fep-vs-silicone-wire-insulation" className="inline-block text-xs font-mono text-swan-red hover:underline mt-3 focus:outline-none">
                   Read Comparison →
                 </Link>
               </div>
@@ -289,7 +289,7 @@ export default async function ApplicationPage({ params }: { params: Promise<{ sl
                 <p className="text-xs text-ink/60 mt-1 leading-relaxed">
                   Detailed analysis of MIL-W-16878E and JSS 51004 standards for avionics and defence harness builds.
                 </p>
-                <Link href="/resources/mil-w-16878-jss-51004-explained" className="inline-block text-xs font-mono text-swan-red hover:underline mt-3 focus:outline-none">
+                <Link href="/resources/mil-w-16878-jss-51004-hook-up-wire-explained" className="inline-block text-xs font-mono text-swan-red hover:underline mt-3 focus:outline-none">
                   Read Standards Guide →
                 </Link>
               </div>

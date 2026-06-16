@@ -48,7 +48,7 @@ const STANDARD_DATA: Record<string, StandardContent> = {
     body1: "MIL-W-16878E (now maintained under NEMA HP3) defines the standard specifications for high-temperature hook-up wires used in flight computers, weapon systems, and military instrumentation. The specification classifies wires based on their insulation wall thickness, which determines the maximum operational voltage class (ET, E, or EE).",
     body2: "It requires conductors to be silver-plated (SPC) for environments up to +200°C and nickel-plated (NPC) for up to +260°C. Conductor stranding must meet specific counts (e.g. 7-strand or 19-strand structures) to verify flexibility and flex-life under military flight vibrations.",
     recommendedProduct: { name: "View PTFE Hook-Up Wires Catalog", url: "/products/ptfe-wires" },
-    articleLink: "/resources/mil-w-16878-jss-51004-explained"
+    articleLink: "/resources/mil-w-16878-jss-51004-hook-up-wire-explained"
   },
   "jss-51004": {
     title: "JSS 51004 Specification Sheet",
@@ -63,7 +63,7 @@ const STANDARD_DATA: Record<string, StandardContent> = {
     body1: "JSS 51004 is maintained by the Directorate of Standardisation, Ministry of Defence, Government of India. This standard is mandatory for all procurement loops inside the Indian Army, Air Force, and Navy. It classifies single-core PTFE hook-up wires into Types ET, E, and EE, matching the MIL-W-16878 series.",
     body2: "JSS 51004 demands rigorous post-sintering electrical tests, including continuous inline spark testing and dielectric water bath immersion tests. Wires must pass these tests without breakdown to be certified for defense supply chains.",
     recommendedProduct: { name: "View PTFE Hook-Up Wires Catalog", url: "/products/ptfe-wires" },
-    articleLink: "/resources/mil-w-16878-jss-51004-explained"
+    articleLink: "/resources/mil-w-16878-jss-51004-hook-up-wire-explained"
   },
   "mil-c-17": {
     title: "MIL-C-17 Specification Sheet",
