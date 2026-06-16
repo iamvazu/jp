@@ -8,7 +8,7 @@ export const PRODUCT_FAMILIES: ProductFamily[] = [
     description: 'Engineered for operation in extreme temperatures and severe environments, our PTFE insulated equipment wires are manufactured strictly in accordance with JSS 51004 and US MIL-W-16878E standards. Featuring annealed silver-plated, nickel-plated, or bare copper conductors, these wires offer unrivaled thermal stability, chemical inertness, and dielectric strength.',
     standardMil: 'MIL-W-16878E',
     standardJss: 'JSS 51004',
-    image: '/brand/crops/ptfe.webp',
+    image: '/brand/crops/product1.webp',
     tagline: 'The Permanent Solution to severe wiring environments.',
     features: [
       'Operational service temperature range from -65°C to +260°C (up to 300°C for short duration)',
@@ -33,7 +33,7 @@ export const PRODUCT_FAMILIES: ProductFamily[] = [
     description: 'Designed for high-frequency signal preservation and critical data transmission, our co-axial, tri-axial, and multi-core cables conform strictly to JSS 51100 and US MIL-C-17. Featuring PTFE or FEP dielectrics and high-density silver-plated copper (SPC) shielding braids, they guarantee clean signals under mechanical stress and extreme thermal ranges.',
     standardMil: 'MIL-C-17',
     standardJss: 'JSS 51100',
-    image: '/brand/crops/product1.webp',
+    image: '/brand/crops/product2.webp',
     tagline: 'Precision signals preserved. Absolute telemetry integrity.',
     features: [
       'Standard impedance options of 50 Ω, 75 Ω, and 90 Ω',
@@ -79,7 +79,7 @@ export const PRODUCT_FAMILIES: ProductFamily[] = [
     description: 'Manufactured to meet the rigorous specifications of JSS 54802 and MIL-I-22129, our PTFE sleevings provide reliable terminal point insulation and bundle protection. With exceptional dielectric breakdown resistance up to 17 kV, these sleevings are chemically inert, non-stick, and highly heat-resistant.',
     standardMil: 'MIL-I-22129',
     standardJss: 'JSS 54802',
-    image: '/brand/crops/product2.webp',
+    image: '/brand/crops/ptfe.webp',
     tagline: 'Dielectric shielding where space is critical.',
     features: [
       'Bore diameters ranging from 0.3 mm up to 30 mm with tight tolerances',

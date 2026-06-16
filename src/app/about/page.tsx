@@ -80,9 +80,6 @@ export default function AboutPage() {
               className="object-cover filter saturate-[0.8] contrast-[1.02]"
               sizes="(max-w-7xl) 100vw, 400px"
             />
-            <div className="absolute bottom-3 right-3 bg-ink/75 text-paper text-[8px] font-mono px-2 py-1 uppercase tracking-widest">
-              FIG.02 // ARCHIVE_CATALOGUE_SCAN
-            </div>
           </div>
 
         </div>

@@ -66,13 +66,7 @@ export default function HomePage() {
     <div className="relative overflow-hidden bg-paper w-full min-h-screen">
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[85vh] flex items-center pt-8 pb-16 md:py-24 border-b border-ink/10 bg-grid-dots">
-        {/* Subtle coordinate markers (Blueprint style) */}
-        <div className="absolute top-4 left-6 hidden md:block text-[9px] font-mono text-ink/30">
-          COORD: [565.32 // ROHTAK.IN]
-        </div>
-        <div className="absolute top-4 right-6 hidden md:block text-[9px] font-mono text-ink/30">
-          GRID: 24x24.DOTS // PAGE: INDEX.01
-        </div>
+
 
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
           {/* Hero Left Content */}
@@ -185,10 +179,7 @@ export default function HomePage() {
                       sizes="(max-w-7xl) 100vw, 400px"
                     />
                   </div>
-                  {/* Blueprint coordinates watermark */}
-                  <div className="absolute bottom-3 right-3 bg-ink/80 text-paper text-[8px] font-mono px-2 py-1 uppercase tracking-widest backdrop-blur-xs z-30">
-                    FIG.01 // PTFE_WIRE_BUNDLES
-                  </div>
+
                 </div>
 
                 {/* Back Face: hero_image2.webp */}
@@ -206,10 +197,7 @@ export default function HomePage() {
                       sizes="(max-w-7xl) 100vw, 400px"
                     />
                   </div>
-                  {/* Blueprint coordinates watermark */}
-                  <div className="absolute bottom-3 right-3 bg-ink/80 text-paper text-[8px] font-mono px-2 py-1 uppercase tracking-widest backdrop-blur-xs z-30 [transform:rotateY(180deg)]">
-                    FIG.02 // CORE_CABLE_RANGE
-                  </div>
+
                 </div>
               </motion.div>
             </motion.div>
@@ -431,8 +419,8 @@ export default function HomePage() {
         </div>
 
         {/* Scrolling list */}
-        <div className="relative flex overflow-x-hidden border-y border-ink/10 py-6 bg-white/50">
-          <div className="animate-marquee whitespace-nowrap flex gap-10 text-xs font-mono uppercase tracking-widest text-ink/60">
+        <div className="relative flex overflow-x-hidden border-y border-ink/10 py-6 bg-white/50 w-full">
+          <div className="animate-marquee whitespace-nowrap flex shrink-0 gap-10 text-xs font-mono uppercase tracking-widest text-ink/60 pr-10">
             <span>AEROSPACE & INSTRUMENTATION</span>
             <span className="text-swan-red">•</span>
             <span>ATOMIC ENERGY & REACTOR CONTROLS</span>
@@ -451,7 +439,7 @@ export default function HomePage() {
             <span className="text-swan-red">•</span>
           </div>
           {/* Repeat for continuous marquee feel */}
-          <div className="absolute top-6 animate-marquee2 whitespace-nowrap flex gap-10 text-xs font-mono uppercase tracking-widest text-ink/60 pl-[100%]">
+          <div className="animate-marquee whitespace-nowrap flex shrink-0 gap-10 text-xs font-mono uppercase tracking-widest text-ink/60 pr-10" aria-hidden="true">
             <span>AEROSPACE & INSTRUMENTATION</span>
             <span className="text-swan-red">•</span>
             <span>ATOMIC ENERGY & REACTOR CONTROLS</span>
@@ -503,16 +491,8 @@ export default function HomePage() {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-100%); }
         }
-        @keyframes marquee2 {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-100%); }
-        }
         .animate-marquee {
           animation: marquee 30s linear infinite;
-        }
-        .animate-marquee2 {
-          animation: marquee2 30s linear infinite;
-          animation-delay: 15s;
         }
       `}</style>
     </div>

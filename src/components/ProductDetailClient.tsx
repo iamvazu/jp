@@ -105,10 +105,6 @@ export default function ProductDetailClient({ family }: ProductDetailClientProps
               className="object-cover filter saturate-[0.8] contrast-[1.02]"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 400px"
             />
-            {/* Spec blueprint marker */}
-            <div className="absolute bottom-3 left-3 bg-ink/75 text-paper text-[8px] font-mono px-2 py-1 uppercase tracking-widest">
-              IMAGE: {family.id.toUpperCase()}_SPEC
-            </div>
           </div>
 
           {/* Product description & stats */}
