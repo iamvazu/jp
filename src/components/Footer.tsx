@@ -24,7 +24,7 @@ export default function Footer() {
           <p className="text-white/60 text-sm max-w-sm leading-relaxed">
             Ministry of Defence (L.C.S.O) and C-DOT approved manufacturer of high-performance PTFE / Teflon and FEP wires, cables, sleeves, and tapes. Engineered for extreme-temperature defense and aerospace wiring applications.
           </p>
-          <div className="flex flex-wrap items-center gap-6 pt-2">
+          <div className="flex flex-wrap items-center gap-4 pt-2">
             {/* MoD Approved Badge */}
             <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-xs">
               <div className="relative w-8 h-10 filter brightness-0 invert shrink-0">
@@ -54,6 +54,22 @@ export default function Footer() {
               <div className="flex flex-col">
                 <span className="text-[9px] font-mono tracking-widest text-white/40 leading-none">APPROVED BY</span>
                 <span className="text-xs font-bold text-white tracking-wide uppercase mt-0.5">C-DOT INDIA</span>
+              </div>
+            </div>
+
+            {/* Make in India Badge */}
+            <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-xs">
+              <div className="relative w-16 h-8 filter brightness-0 invert shrink-0">
+                <Image
+                  src="/brand/crops/make_in_india.png"
+                  alt="Make in India Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[9px] font-mono tracking-widest text-white/40 leading-none">MANUFACTURED IN</span>
+                <span className="text-xs font-bold text-white tracking-wide uppercase mt-0.5">INDIA</span>
               </div>
             </div>
           </div>

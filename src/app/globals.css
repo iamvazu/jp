@@ -94,10 +94,23 @@ html.lenis body {
   }
 }
 
-.animate-draw {
+.animate-draw-solid {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: drawLine 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes flowBlue {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.animate-flow-blue {
+  animation: flowBlue 1.5s linear infinite;
 }
 
 /* Custom Focus Ring for Accessibility */

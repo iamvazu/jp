@@ -132,30 +132,49 @@ export default function HomePage() {
 
           {/* Hero Right Media (with mask & drawing SVG wire) */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
-            {/* SVG drawing wire path */}
+            {/* SVG drawing wire path with continuous electron pulse flow */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none z-20"
               viewBox="0 0 400 400"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              {/* Drawing cable wire simulation */}
+              {/* Solid Orange Wire - Draws in on load */}
               <path
                 d="M -50,300 C 100,320 150,100 250,80 C 350,60 400,200 450,220"
                 stroke="#F2602F"
                 strokeWidth="3"
                 strokeLinecap="round"
-                className="animate-draw"
+                className="animate-draw-solid"
               />
+              {/* Continuous Orange Pulse traveling along the solid path */}
+              <circle r="4.5" fill="#F2602F">
+                <animateMotion
+                  dur="4s"
+                  repeatCount="indefinite"
+                  path="M -50,300 C 100,320 150,100 250,80 C 350,60 400,200 450,220"
+                  begin="2s"
+                />
+              </circle>
+
+              {/* Dashed Blue Wire - Flows continuously to show signals */}
               <path
                 d="M -30,280 C 80,300 130,120 230,100 C 330,80 380,220 430,240"
                 stroke="#1F4FA3"
                 strokeWidth="1.5"
                 strokeLinecap="round"
-                strokeDasharray="4 4"
-                className="animate-draw"
-                style={{ animationDelay: '0.5s' }}
+                strokeDasharray="6 6"
+                className="animate-flow-blue"
               />
+              {/* Continuous Blue Pulse traveling along the dashed path */}
+              <circle r="3.5" fill="#1F4FA3">
+                <animateMotion
+                  dur="4.5s"
+                  repeatCount="indefinite"
+                  path="M -30,280 C 80,300 130,120 230,100 C 330,80 380,220 430,240"
+                  begin="0.5s"
+                />
+              </circle>
             </svg>
 
             {/* Parallax image revealed via custom container mask */}

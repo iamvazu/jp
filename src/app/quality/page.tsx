@@ -84,7 +84,14 @@ export default function QualityPage() {
             {/* Approval 3 */}
             <div className="bg-white p-6 border border-ink/10 rounded-xs space-y-4">
               <div className="flex items-center justify-between">
-                <ShieldCheck className="w-8 h-8 text-swan-red" />
+                <div className="relative w-16 h-8 shrink-0">
+                  <Image
+                    src="/brand/crops/ddpdos_logo.png"
+                    alt="Directorate of Standardisation (JSS) Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <span className="text-[9px] font-mono text-ink/40 uppercase">JSS CONFORMANCE</span>
               </div>
               <h3 className="font-display font-bold text-base uppercase text-ink">
@@ -101,7 +108,14 @@ export default function QualityPage() {
             {/* Approval 4 */}
             <div className="bg-white p-6 border border-ink/10 rounded-xs space-y-4">
               <div className="flex items-center justify-between">
-                <ShieldCheck className="w-8 h-8 text-swan-red" />
+                <div className="relative w-10 h-10 shrink-0">
+                  <Image
+                    src="/brand/crops/dod_seal.svg"
+                    alt="US Department of Defense (DoD) Seal"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <span className="text-[9px] font-mono text-ink/40 uppercase">MIL SPEC CODES</span>
               </div>
               <h3 className="font-display font-bold text-base uppercase text-ink">
