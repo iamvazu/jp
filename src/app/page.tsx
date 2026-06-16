@@ -186,7 +186,7 @@ export default function HomePage() {
               className="relative w-full aspect-[4/5] sm:aspect-square md:aspect-[4/5] bg-white border border-ink/10 rounded-xs overflow-hidden shadow-xl"
             >
               <Image
-                src="/brand/crops/photo_wire_coils_bundles.jpg"
+                src="/brand/crops/homepage_hero.webp"
                 alt="Coloured PTFE wire coils + cut bundles"
                 fill
                 priority
@@ -245,9 +245,9 @@ export default function HomePage() {
 
           {/* Asymmetric Grid Layout (using Tailwind grid col spans) */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            {PRODUCT_FAMILIES.slice(0, 5).map((family, index) => {
+            {PRODUCT_FAMILIES.map((family, index) => {
               // Alternate grid spans for asymmetric look
-              const isLarge = index === 0 || index === 3;
+              const isLarge = index === 0 || index === 3 || index === 4;
               const gridClass = isLarge ? 'md:col-span-7' : 'md:col-span-5';
               const heightClass = 'h-[300px] md:h-[400px]';
 
