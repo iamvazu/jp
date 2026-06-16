@@ -6,6 +6,7 @@ import SmoothScroll from '../components/SmoothScroll';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import RfqSidebar from '../components/RfqSidebar';
+import { Analytics } from '@vercel/analytics/next';
 
 const archivo = Archivo({
   variable: '--font-display',
@@ -116,6 +117,7 @@ export default function RootLayout({
             </main>
             <Footer />
             <RfqSidebar />
+            <Analytics />
           </SmoothScroll>
         </RfqProvider>
       </body>
