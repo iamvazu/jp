@@ -1,10 +1,14 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Check, ShieldCheck } from 'lucide-react';
 import { PRODUCT_FAMILIES } from '../../data/content';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'PTFE & FEP Wires, Coaxial Cables & Sleevings Catalog',
+  description: 'Browse the Jain Polymer Co. catalog of high-temperature PTFE hook-up wires, FEP extruded cables, coaxial cables, PTFE sleeves, and thread-seal tapes approved by MoD & C-DOT.',
+};
 
 export default function ProductsPage() {
   return (

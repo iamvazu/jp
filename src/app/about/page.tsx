@@ -1,8 +1,12 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import { History, ShieldCheck, Factory, Award } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'PTFE Wire & Cable Manufacturer | Jain Polymer Co. Heritage',
+  description: 'Established in 1991 by Shri S.K. Jain, Jain Polymer Co. manufactures premium high-temperature PTFE/Teflon and FEP wires and cables in Rohtak, Haryana.',
+};
 
 export default function AboutPage() {
   const milestones = [

@@ -29,9 +29,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Jain Polymer Co. | High-Performance PTFE & FEP Cables',
-  description: 'Ministry of Defence (L.C.S.O) and C-DOT approved manufacturer of PTFE/Teflon and FEP wires, cables, sleeves, and tapes. Premium engineering quality since 1991.',
-  keywords: ['PTFE wire', 'Teflon cable', 'FEP extruded wires', 'PTFE sleeve', 'LCSO approved cables', 'JSS 51004', 'MIL-W-16878E'],
+  metadataBase: new URL(process.env.SITE_URL || 'https://www.jainpolymers.com'),
+  title: {
+    default: 'PTFE & Teflon Wire Manufacturer in India | MoD-Approved | Jain Polymer Co.',
+    template: '%s | Jain Polymer Co.',
+  },
+  description: 'Ministry of Defence (L.C.S.O) and C-DOT approved manufacturer of high-performance PTFE/Teflon and FEP wires, cables, sleeves, and tapes since 1991.',
   authors: [{ name: 'Jain Polymer Co.' }],
 };
 
@@ -45,12 +48,66 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteUrl = process.env.SITE_URL || 'https://www.jainpolymers.com';
+  
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        "name": "Jain Polymer Co.",
+        "url": siteUrl,
+        "logo": `${siteUrl}/brand/crops/emblem_of_india.svg`,
+        "description": "Ministry of Defence (L.C.S.O) and C-DOT approved manufacturer of high-performance PTFE/Teflon and FEP wires, cables, sleeves, and tapes."
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": `${siteUrl}/#localbusiness`,
+        "name": "Jain Polymer Co.",
+        "image": `${siteUrl}/brand/crops/photo_wire_coils_bundles.jpg`,
+        "telephone": "+91-1262-259727",
+        "url": siteUrl,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "565/32, Circular Road",
+          "addressLocality": "Rohtak",
+          "addressRegion": "Haryana",
+          "postalCode": "124001",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 28.89,
+          "longitude": 76.60
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      }
+    ]
+  };
+
   return (
     <html
       lang="en"
       className={`${archivo.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink selection:bg-cobalt selection:text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <RfqProvider>
           <SmoothScroll>
             <Header />

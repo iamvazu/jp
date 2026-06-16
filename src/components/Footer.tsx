@@ -87,6 +87,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/resources" className="hover:text-swan-red transition-colors focus:outline-none">
+                Technical Guides
+              </Link>
+            </li>
+            <li>
               <Link href="/quality" className="hover:text-swan-red transition-colors focus:outline-none">
                 Quality & Compliance
               </Link>

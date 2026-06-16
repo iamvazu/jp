@@ -120,7 +120,7 @@ export default function HomePage() {
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <a
-                href="/brand/WIRE & SLEEVE CATALOGUE.pdf"
+                href="/brand/jain-polymer-wire-sleeve-catalogue.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-ink/20 hover:border-ink bg-white/50 hover:bg-paper text-ink font-mono text-xs uppercase tracking-widest px-6 py-4 rounded-xs flex items-center justify-center transition-all cursor-pointer"

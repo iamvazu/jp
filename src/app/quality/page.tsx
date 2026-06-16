@@ -1,9 +1,13 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import { ShieldAlert, Award, Calendar, CheckSquare, ShieldCheck, HelpCircle } from 'lucide-react';
 import { QUALITY_TIMELINE, DIELECTRIC_TESTS } from '../../data/content';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Quality, Testing & MoD / C-DOT Approvals | JSS & MIL Conformance',
+  description: 'Learn about our rigorous defense-grade quality systems, spark and dielectric test ratings, and institutional MoD (L.C.S.O) and C-DOT certifications.',
+};
 
 export default function QualityPage() {
   return (

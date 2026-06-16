@@ -28,6 +28,7 @@ export default function Header() {
 
   const navLinks = [
     { href: '/products', label: 'Products' },
+    { href: '/resources', label: 'Guides' },
     { href: '/quality', label: 'Quality & Approvals' },
     { href: '/about', label: 'About Us' },
     { href: '/contact', label: 'Contact' },
